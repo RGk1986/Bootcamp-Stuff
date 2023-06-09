@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<label for="item">Select Item:</label>
+    <input type="text" list="items" id="item">
+    <datalist id="items">
+</datalist>
+
+<script>   
+const itemsData = [
+  { name: "Apple", quantities: [1, 2, 3, 4, 5] },
+  { name: "Banana", quantities: [1, 2, 3, 4, 5] },
+  { name: "Orange", quantities: [1, 2, 3, 4, 5] },
+];
+
+// Get the input and datalist elements
+const input = document.getElementById("item");
+const datalist = document.getElementById("items");
+
+// Generate the options for the datalist
+itemsData.forEach(item => {
+  const optionGroup = document.createElement("optgroup");
+  optionGroup.label = item.name;
+
+  item.quantities.forEach(quantity => {
+    const option = document.createElement("option");
+    option.value = `${item.name} (${quantity})`;
+    optionGroup.appendChild(option);
+  });
+
+  datalist.appendChild(optionGroup);
+});
+
+// Add event listener for selecting an option
+input.addEventListener("input", (event) => {
+  const selectedValue = event.target.value;
+  console.log(selectedValue);
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+section{
+    color: crimson;
+    
+}
+
+p{
+    color: aqua;
+    font-weight: 700;
+    font-size: 50px;
+
+}
+
+.para{
+    color: rosybrown;
+    
+
+}
+
+.para2{
+    color: green
+
+}
+
+#para1{
+    color: yellow;
+    font-style: italic;
+    font-size: larger;
+
+
+}

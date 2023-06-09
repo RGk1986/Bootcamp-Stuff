@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<label for="item">Select Item and Quantity:</label>
+    <input list="itemList" name="item" id="itemInput">
+    <datalist id="itemList">
+</datalist>
+
+
+</body>
+</html>
+
+<script>
+const itemList = document.getElementById('itemList');
+const itemInput = document.getElementById('itemInput');
+
+// Define the items and their quantities
+const items = [
+  { name: 'Item 1', quantities: [1, 2, 3] },
+  { name: 'Item 2', quantities: [5, 10, 15] },
+  { name: 'Item 3', quantities: [2, 4, 6] },
+];
+
+// Populate the datalist options
+items.forEach(item => {
+  const optionGroup = document.createElement('optgroup');
+  optionGroup.label = item.name;
+
+  item.quantities.forEach(quantity => {
+    const option = document.createElement('option');
+    option.value = `${item.name} - ${quantity}`;
+    optionGroup.appendChild(option);
+  });
+
+  itemList.appendChild(optionGroup);
+});
+
+// Handle selection change
+itemInput.addEventListener('change', function() {
+  console.log('Selected:', this.value);
+});
+</script>

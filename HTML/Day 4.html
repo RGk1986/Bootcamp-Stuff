@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 style = "color: mediumaquamarine; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: crimson;">Rob Kirkland</h3>
+
+<h3>Selection Box</h3>
+
+<label for="fruit">Choose a fruit:</label><br/><br/>
+
+<select name="fruit" id="fruit">
+    <option value="default">Select a fruit from the list</option>
+    <option value="apple">Apple</option>
+    <option value="orange">Orange</option>
+    <option value="banana">Banana</option>
+    <option value="grape">Grape</option>
+</select>
+
+<h3>Radio Button Options</h3>
+<p>Please select one of the options below...</p>
+<form>
+    <input type="radio" id="apple" name="fruit" value="apple">
+    <label for="apple">&#127822;</label><br>
+    <input type="radio" id="orange" name="fruit" value="orange">
+    <label for="orange">&#127818;</label><br>
+    <input type="radio" id="banana" name="fruit" value="banana">
+    <label for="banana">&#127820;</label><br>
+    <input type="radio" id="grape" name="fruit" value="grape">
+    <label for="grape">&#127815;</label><br>
+</form>
+
+<h3>Checkbox Options</h3>
+<p>Please select all fruits that you like </p>
+<form>
+    <input type="checkbox" id="apple" name="fruit" value="apple"> 
+    <label for="apple">Apple; &#127822;</label><br>
+    <input type="checkbox" id="orange" name="fruit" value="orange">
+    <label for="orange">Orange; &#127818</label><br>
+    <input type="checkbox" id="banana" name="fruit" value="banana">
+    <label for="banana">Banana; &#127820</label><br>
+    <input type="checkbox" id="grape" name="fruit" value="grape">
+    <label for="grape">Grape &#127815</label><br>
+    <input type="submit" value="Submit">
+</form>
+
+<h3>Datalist Options</h3>
+<!-- Datalist's can be used to offer options from multiple <datalist> options when replacing the <input list="insert datalist name here"> you can replace the list with any existing list-->
+
+
+<label for="potato">Choose how you would like your potato cooked &#127840</label>
+<input list="cooking" name="potato" id="potato" required>
+
+<datalist id="cooking">
+    <option value="Boiled">
+    <option value="Mashed">
+    <option value="Jacket">
+    <option value="Dauphinoise">
+    <option value="Chips">
+
+</datalist>
+<br><br>
+<label for="desert">Choose what you would like for desert</label>
+<input list="desert1" name="desert" id="desert" required>
+
+<datalist id="desert1">
+    <option value="Ice Cream">&#127848</option>
+    <option value="Cake">&#127856</option>
+    <option value="Fruit">&#127826</option>
+    <option value="Chocolate">&#127851</option>
+    <option value="Moon Cake">&#129390</option>
+
+    </datalist>
+
+
+<datalist id="cars">
+    <option value="BMW">
+    <option value="Ford">
+    <option value="Volvo">
+    <option value="Audi">
+    <option value="Mercedes">
+    <option value="Vauxhall">
+    <option value="Volkswagen">
+    <option value="Toyota">
+    <option value="Honda">
+    <option value="Nissan">
+    <option value="Peugeot">
+    <option value="Renault">
+    <option value="Fiat">
+
+</datalist>
+
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Ordering</title>
+  <style>
+    /* Add some basic styles for the form */
+    .order-form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+    }
+
+    .form-group input[type="number"] {
+      width: 50px;
+    }
+
+    .form-group textarea {
+      width: 100%;
+      height: 100px;
+    }
+
+    .form-group button {
+      padding: 0.5rem 1rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Online Ordering</h1>
+
+  <div class="order-form">
+    <form id="orderForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="items">Menu Items:</label>
+        <input type="checkbox" id="burger" name="items" value="Burger">
+        <label for="burger">Burger</label><br>
+        <input type="checkbox" id="pizza" name="items" value="Pizza">
+        <label for="pizza">Pizza</label><br>
+        <input type="checkbox" id="salad" name="items" value="Salad">
+        <label for="salad">Salad</label><br>
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="instructions">Special Instructions:</label>
+        <textarea id="instructions" name="instructions"></textarea>
+      </div>
+
+      <div class="form-group">
+        <button type="submit">Place Order</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // Handle form submission
+    document.getElementById('orderForm').addEventListener('submit', function(event) )
+      event.preventDefault();
+
+      // Retrieve form values
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const items = document.querySelectorAll('input[name="items"]:checked');
+      const quantity = document.getElementById('quantity').value;
+      const instructions = document.getElementById('instructions').value;
+
+      // Generate order summary
+      let orderSummary = `Name: ${name}\nEmail: ${email}\nItems:\n`;
+
+      items.forEach(function(item) {
+        orderSummary += `- ${item.value}\n`;
+      });
+
+      orderSummary += `Quantity: ${quantity}\nInstructions: ${instructions}`;
+
+      // Display order summary
+      alert('Order placed:\n\n' + orderSummary);
+
+      // Reset

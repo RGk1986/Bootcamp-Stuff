@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+fieldset {
+  background-color: rgba(216, 204, 143, 0.804);
+  border: 5px solid #0b0b0b;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:medium;
+  color: rgb(6, 7, 6);
+}
+</style>
+  <title>Online Ordering</title>
+</head>
+<body>
+<form>
+<fieldset>
+    <legend><img src="/Images/Restaurant.jpeg" alt="restaurantlogo" height="100px" width="100px"><em>Place your online order here</em></legend>
+    
+  <div><br><br>
+    <label for="maindish">Choose the main meal you would like</label>
+    <input list="main" name="maindish" id="maindish" required>
+
+<datalist id="main">
+    <option value="Chicken and Waffles">
+    <option value="Duck Spring Rolls">
+    <option value="Chicken in sweet and sour sauce">
+    <option value="Roast Venison with potato">
+    <option value="Vegetarian Burger with side salad (vg)">
+
+
+</datalist>
+<br><br><br>
+<p>Please select any sides you would like with your main dish </p>
+<form>
+    <input type="checkbox" id="fries" name="sides" value="fries">
+    <label for="fries">Fries</label><br>
+    <input type="checkbox" id="salad" name="sides" value="salad">
+    <label for="salad">Salad</label><br>
+    <input type="checkbox" id="rice" name="sides" value="rice">
+    <label for="rice">Rice</label><br>
+    <input type="checkbox" id="potato" name="sides" value="potato">
+    <label for="potato">Potato</label><br>
+    <input type="checkbox" id="vegetables" name="sides" value="vegetables">
+    <label for="vegetables">Vegetables</label><br>
+    <input type="checkbox" id="coleslaw" name="sides" value="coleslaw">
+    <label for="coleslaw">Coleslaw</label><br>
+    <input type="checkbox" id="garlicbread" name="sides" value="garlicbread">
+    <label for="garlicbread">Garlic Bread</label><br>
+
+<br><br><br>
+
+<label for="drink">Please select a drink to go with your meal</label>
+ <input list="drinks" name="drink" id="drink" required>
+
+ <datalist id="drinks">
+    <option value="Coke">
+    <option value="Diet Coke">
+    <option value="Fanta">
+    <option value="Sprite">
+    <option value="Water">
+    <option value="Orange Juice">
+    <option value="Apple Juice">
+    <option value="Tea">
+    <option value="Coffee">
+
+ </datalist>
+
+<br><br><br>
+
+ <label style="font-size: larger; color: red; font-weight: 700;"> Allergy Information is available on request, although every attempt will be made to ensure<br>
+  that the food served is free from specific allergens because of the way food is prepared it is not<br>
+  possible to guarantee the absence of allergens in our products.</label></style>
+
+</div></fieldset></form>
+
+<input type="submit" value="Submit">
+
+</body>
+</html>

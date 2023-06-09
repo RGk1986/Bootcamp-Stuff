@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/classes_ids.css"
+    <title>Document</title>
+</head>
+<body>
+
+<!-- Classes > Can be applied to multiple elements on your HTML Document -->
+<!-- ID's > Can only be applied to one item, as it's name is unique -->
+
+    <section>
+        <p>Lorem ipsum dolum</p>x
+        <p class="para">Lorem ipsum dolum</p>
+        <p class="para" id="para1">Lorem ipsum dolum</p>
+        <p id="para2">Lorem ipsum dolum</p>
+
+    </section>
+<!-- Specificity > Heirarchy system : 
+    3. Tags/Elements 
+    2. Classes  
+    1. ID's  -->
+
+<!-- Inheritance > where an element takes the style of it's parent -->
+
+<form name="Login Form" action="#" method="POST">
+    <label for="username"> <b>Username:</b> </label>
+    <input type="text" id="username" name="username"
+        placeholder="Enter Username" required/>
+    <br/><br/>
+    <label for="password"> <b>Password:</b> </label>
+    <input type="password" id="password" name="password"
+        placeholder="Enter Password" required minlength="8"/>     
+    <br/><br/>
+    <label for ="remember"></label>
+    <input type="checkbox" name="remember" id="remember">Remember Me?</input>
+    <br/><br/>
+    <button type="submit">Submit</button>
+</form>
+<!-- The form above collects username and password, minimum length on password exists -->
+
+</body>
+</html>
